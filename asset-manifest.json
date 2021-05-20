@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Coro-Know/static/css/main.a719abf9.chunk.css",
+    "main.js": "/Coro-Know/static/js/main.b9966930.chunk.js",
+    "main.js.map": "/Coro-Know/static/js/main.b9966930.chunk.js.map",
+    "runtime-main.js": "/Coro-Know/static/js/runtime-main.0216150d.js",
+    "runtime-main.js.map": "/Coro-Know/static/js/runtime-main.0216150d.js.map",
+    "static/css/2.61b4cb56.chunk.css": "/Coro-Know/static/css/2.61b4cb56.chunk.css",
+    "static/js/2.3b84bd5a.chunk.js": "/Coro-Know/static/js/2.3b84bd5a.chunk.js",
+    "static/js/2.3b84bd5a.chunk.js.map": "/Coro-Know/static/js/2.3b84bd5a.chunk.js.map",
+    "static/js/3.6bfc9520.chunk.js": "/Coro-Know/static/js/3.6bfc9520.chunk.js",
+    "static/js/3.6bfc9520.chunk.js.map": "/Coro-Know/static/js/3.6bfc9520.chunk.js.map",
+    "index.html": "/Coro-Know/index.html",
+    "static/css/2.61b4cb56.chunk.css.map": "/Coro-Know/static/css/2.61b4cb56.chunk.css.map",
+    "static/css/main.a719abf9.chunk.css.map": "/Coro-Know/static/css/main.a719abf9.chunk.css.map",
+    "static/js/2.3b84bd5a.chunk.js.LICENSE.txt": "/Coro-Know/static/js/2.3b84bd5a.chunk.js.LICENSE.txt",
+    "static/media/kajal.d2d403be.jpeg": "/Coro-Know/static/media/kajal.d2d403be.jpeg",
+    "static/media/logo.8eaa355e.gif": "/Coro-Know/static/media/logo.8eaa355e.gif",
+    "static/media/shivam.8f11116e.jpeg": "/Coro-Know/static/media/shivam.8f11116e.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0216150d.js",
+    "static/css/2.61b4cb56.chunk.css",
+    "static/js/2.3b84bd5a.chunk.js",
+    "static/css/main.a719abf9.chunk.css",
+    "static/js/main.b9966930.chunk.js"
+  ]
+}
