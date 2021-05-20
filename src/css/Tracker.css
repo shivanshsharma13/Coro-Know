@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;500&display=swap');
+.state__color{
+    color: blueviolet;
+}
+
+.state__codecolor{
+    color: rgb(80, 70, 226);
+}
+
+.tracker{
+    margin: 10px 5% 10px 5%;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 800;
+}
+
+.tracker>h1{
+    text-align: center;
+}
+
+.state__confirmed{
+	color:red;
+}
+
+.state__active{
+    color: brown;
+}
+.state__deaths{
+    color: blue;
+}
+.state__recovered{
+    color: green;
+}
+.lastup{
+    color: slateblue;
+}

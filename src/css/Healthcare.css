@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;500&display=swap');
+
+
+
+.healthcare{
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10% 10px 10%;
+    font-family: 'Crimson Pro', serif;
+    font-size: 18px;
+
+}
+
+.healthcare>h1{
+    text-align: center;
+}
+
+.select__items{
+    width: 400px;
+    height: 45px;
+    border-radius: 50px;
+    
+}
+
+.animated__ring{
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important; 
+    transform: translate(-50%, -50%) !important;
+}
+
+.form-outline{
+    margin:20px 30px 20px 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+

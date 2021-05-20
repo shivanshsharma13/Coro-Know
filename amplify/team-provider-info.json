@@ -1,0 +1,20 @@
+{
+  "ckapp": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ckapp-ckapp-201945-authRole",
+      "UnauthRoleArn": "arn:aws:iam::936075375762:role/amplify-ckapp-ckapp-201945-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::936075375762:role/amplify-ckapp-ckapp-201945-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-ckapp-ckapp-201945-deployment",
+      "UnauthRoleName": "amplify-ckapp-ckapp-201945-unauthRole",
+      "StackName": "amplify-ckapp-ckapp-201945",
+      "StackId": "arn:aws:cloudformation:us-east-1:936075375762:stack/amplify-ckapp-ckapp-201945/f8da3ee0-b655-11eb-8efe-0e51aa6fabf5",
+      "AmplifyAppId": "d2y7egdwgb0jks"
+    },
+    "categories": {
+      "auth": {
+        "ckapp0544eeca": {}
+      }
+    }
+  }
+}

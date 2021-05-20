@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+
+.home{
+
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.Home__left{
+    /* margin: 5px 15px 0px 15px; */
+    flex:4;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #d3d3d3; */
+
+    margin: 0px 0px 0px 10px;
+    padding: 25px;
+
+}
+
+
+.content{
+    background-color: #9ee08e;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.con>h5{
+    background-color: #9ee08e;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.list-group>h5{
+    text-align: center !important;
+    
+}
+
+.list-group{
+    margin: 20px 0px 15px 0px !important;
+    padding: 15px 0px 15px 0px !important;
+    background-color: #7ed6ca;
+    border-radius: 20px;
+}
+
+.Home__middle{
+    /* margin: 5px 15px 0px 15px; */
+    flex:6;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 150px;
+    padding: 25px;
+
+}
+
+.Chart{
+    height:100%;
+    width: 100%;
+
+}
+
+
+.graphs{
+    margin: 20px;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .home{
+        display: block;
+    }
+
+    .Home__middle{
+        padding: 0;
+    }
+    .graphs{
+        margin: 30px 0px 30px 0px;
+    }
+
+
+}

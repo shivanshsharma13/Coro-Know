@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+/* 
+@media screen and (max-width: 1300px) {
+    .logocon{
+        position: relative;
+        top: 0px;
+        left: 0px;  
+        transform: translate(0%, 0%);
+        background-color: transparent;
+
+       
+    }
+
+    .NavItems{
+        flex-direction:column;
+        position:fixed;
+        width:100%;
+        clip-path:circle(50px at 90% -10%);
+        -webkit-clip-path:circle(50px at 90% -10%);
+        transition: all 1s ease;
+    }
+
+    .logo_link{
+        font-size: 20px;
+    }
+
+    body{
+        position: absolute;
+        /* background-color: lightblue; */
+    /* } */
+    
+    /* .NavItems.open{
+        clip-path:circle(1280px at 90% -10%);
+        -webkit-clip-path:circle(1280px at 90% -10%);
+    } */
+
+  /* } */ */
+
+
+
+a.active{
+    background-color: slateblue;
+    border-radius: 999px;
+    color: white;
+}
+
+.navlink{
+    display: flex;
+    color: slateblue;
+    text-decoration: none;
+    padding: 5px 10px 0px 10px;
+    
+}
+
+.navlink:hover{
+    background-color: slateblue;
+    border-radius: 999px;
+    color: white;
+}
+
+.NavItems{
+    display: flex;
+    justify-content: space-between;
+    flex:1;
+    
+}
+
+.navbar-nav{
+    flex:1 !important;
+    margin:0px 10px 2px 10px;
+    
+}
+
+.logocon{
+    border-radius:999px;
+    background-color:white;
+    padding:0px 10px 0px 10px;
+    display: flex;
+}
+
+.logo_link{
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    top: 9% !important;
+    left: 50% !important; 
+    transform: translate(-50%, -50%) !important;
+    margin: 5px 0px 5px 0px;
+    z-index: 1;
+}
+
+.logocon>img{
+    width: 75px;
+    height: auto;
+}
+
+.Navbars{
+    background-color: #add8e6 !important;
+}
+
+
+.Main__nav{
+    margin-bottom:60px !important;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .NavItems{
+        display: block;
+        justify-content: none;
+        flex:0;
+        
+    }
+
+    .logo_link{
+        position: relative !important;
+        top: 0px !important;
+        left: 0px !important; 
+        transform: translate(50%, 50%) !important;
+        margin: 0px;      
+    }
+
+    .logocon{
+        align-items: center;
+        justify-content: center;  
+    }
+    
+}
+
+
+@media only screen and (max-width: 991px) {
+    
+    .Main__nav{
+        margin-bottom:20px !important;
+    }
+
+}

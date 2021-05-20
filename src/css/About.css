@@ -1,0 +1,27 @@
+.about{
+    text-align: center;
+
+}
+
+.cardlist{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.cardinfo{
+    width: 18rem;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .cardlist{
+        display: block;
+    
+    }
+    .cardinfo{
+        width: 100%;
+    }
+    
+}

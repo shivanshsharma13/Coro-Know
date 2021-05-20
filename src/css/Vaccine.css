@@ -1,0 +1,29 @@
+.sec{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.vaccine_show{
+    margin: 0px 5% 0px 5%;
+
+}
+
+.vaccine{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    justify-content: space-evenly;
+    
+}
+
+.vaccine>h1{
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 991px) {
+    .sec{
+        display: block;
+    }
+    
+}
