@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card, CardDeck, CardGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
 import RingLoader from "react-spinners/RingLoader";
 import "../css/Vaccine.css"
 function Vaccine() {
@@ -15,17 +15,18 @@ function Vaccine() {
     }
 
 
-
+    var today = new Date();
+    var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
 
 
 
 
     const apiGet = async () => {
-        await fetch("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=462016&date=31-03-2021")
+        await fetch("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=312&date=" + (date))
             .then((response) => response.json())
             .then((json) => {
-                console.log(json.sessions);
-                setvac(json.sessions);
+                console.log(json.centers);
+                setvac(json.centers);
             });
         setload(true)
     };
@@ -46,63 +47,58 @@ function Vaccine() {
 
             <h1>Vaccine Availability in Bhopal</h1>
             <hr />
+
+
             {
                 load
 
                     ?
                     <div className="vaccine_show">
-                        {vac.map(e => (
+                        <div className="gh row">
+                            <h1>Date:{date}</h1>
+                            {vac.map(e => (
 
-                            <Card className="text-center">
-                                <Card.Header>{e.vaccine}</Card.Header>
-                                <Card.Body>
-                                    <Card.Title>Availability: {e.available_capacity}</Card.Title>
-                                    <Card.Text>
-                                        <div className="sec">
-                                            <p>From : {e.from}</p>
-                                            <p>To : {e.to}</p>
-                                        </div>
+                                <Card style={{ width: '32rem' }} className="sty_card">
 
-
-                                    </Card.Text>
-                                    <hr />
-
-                                    <Card.Text>
-                                        Minimum Age: {e.min_age_limit}
-                                    </Card.Text>
-                                    <hr />
-                                    <Card.Text>
-                                        Fees: {e.fee}
-                                    </Card.Text>
-                                    <hr />
-
-                                    <Card.Text>
-                                        <div className="sec">
-                                            <p> Hospital:{e.name}</p>
-                                            <p>    State:{e.state_name}</p>
-                                            <p> District:{e.district_name}</p>
-                                            <p> Pincode:{e.pincode}</p>
-                                        </div>
-                                    </Card.Text>
-
-                                </Card.Body>
-                                <hr />
-                                <Card.Body>
-                                    <Card.Title>Slots Available</Card.Title>
-                                    <ListGroup className="list-group-flush">
-                                        {e.slots.map(q => (
-
-                                            <ListGroupItem>{q}</ListGroupItem>
-
+                                    <Card.Body>
+                                        {e.sessions.map(Q => (
+                                            <Card.Title>Vaccine Name: {Q.vaccine}</Card.Title>
                                         ))}
+                                        <Card.Text>
+                                            Location:{e.name}
+                                        </Card.Text>
+                                        <Card.Text>
+                                            Address: {e.address}, {e.state_name}, {e.district_name}, block name: {e.block_name}
+                                        </Card.Text>
+                                        <Card.Text>
+                                            Pincode: {e.pincode}
+                                        </Card.Text>
+
+                                    </Card.Body>
+                                    <ListGroup className="list-group-flush">
+                                        <ListGroupItem>From:{e.from}</ListGroupItem>
+                                        <ListGroupItem>To:{e.to}</ListGroupItem>
+                                        <ListGroupItem>Fees Type:{e.fee_type}</ListGroupItem>
+
+                                        {e.sessions.map(q => (
+                                            <ListGroup className="list-group-flush">
+                                                <ListGroup.Item>Available Capacity Dose-1:{q.available_capacity_dose1}</ListGroup.Item>
+                                                <ListGroup.Item>Available Capacity Dose-2:{q.available_capacity_dose2}</ListGroup.Item>
+                                                <ListGroup.Item>Min Age limit:{q.min_age_limit}</ListGroup.Item>
+                                                <ListGroupItem>Slots</ListGroupItem>
+                                                {q.slots.map(r => (
+                                                    <ListGroupItem>{r}</ListGroupItem>
+                                                ))}
+                                            </ListGroup>
+                                        ))}
+
                                     </ListGroup>
 
-                                </Card.Body>
-                                <Card.Footer className="text-muted">Date:{e.date}</Card.Footer>
-                            </Card>
+                                </Card>
 
 
-                        ))}
+                            ))}
+                        </div>
                     </div>
                     :
                     <RingLoader className="animated_" css={ring_css} color={"slateblue"} loading={true} size={100} />

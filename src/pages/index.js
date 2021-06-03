@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 // import LineGraph from '../components/LineGraph'
 import "../css/Home.css"
+// import coroknow from "../assets/coroknow.json"
 import { Bar, Doughnut } from 'react-chartjs-2'
 
 
@@ -8,7 +9,7 @@ import { Bar, Doughnut } from 'react-chartjs-2'
 
 function Home() {
 
-    const [content, setcontent] = useState([])
+    // const [content, setcontent] = useState([])
     const [world, setworld] = useState([])
 
 
@@ -110,20 +111,45 @@ function Home() {
 
     // https://disease.sh/v3/covid-19/historical/india?lastdays=137
 
-    useEffect(() => {
-        fetch('./coroknow.json').then(response => {
-            console.log(response);
-            return response.json();
-        }).then(data => {
-            // Work with JSON data here
-            console.log(data);
-            setcontent(data.Home)
-        }).catch(err => {
-            // Do something for an error here
-            console.log("Error Reading data " + err);
-        });
-    }, [])
 
+    const details = [
+
+        {
+            "Isolation": "It is very necessary to keep ready a separate room or place for a sick person. For other members of the family, it's advised to keep distance from a sick person. Only one person of the family is allowed to provide food, medicine, and other kinds of stuff to sick people.  It is also important for that person to male fewest contact with other household members.",
+            "Premanagemnet": "You must have sufficient stock of sanitizers, medicines, stuff of daily needs. In case of sickness prepare a separate and well-ventilated room for a sick person. Keep the contact list of nearby groceries and medical facilities. Pay special attention to the children's and old peoples of your family. ",
+            "Disinfection": "Use sanitizers and hand wash to disinfect household things and frequently touched surfaces like mobile and TV remote. Every time when you come home from outside you must sanitize your clothes and wash your hands properly. Disinfection reduces the effectiveness of coronavirus. Keep disinfecting the high touches surfaces in the household three to five days a week. A proper routine should be followed for disinfection.",
+            "Diet": "Before preparing or eating food it is necessary to wash vegetables and your hands properly. Don't use sanitizer to sanitize your hands before eating food. A proper nutritional diet must be followed by a sick person and also by other members of the household. Pay special attention the person is at high risk for serious illness.Ensure the sick a person has dry fruits, fruits, pulses, and eggs in their diet. And also the sick person stays hydrated.",
+            "Laws": [
+                {
+                    "A": "Section 271 of the Indian Penal Code, 1860 - “Disobedience to quarantine rule. This section clearly says that whosoever don't follow the quarantine rule must be punished with imprisonment or fine or both.",
+                    "B": "Section 269 of the Indian Penal Code, 1860 - “Negligent act likely to spread infection of disease danger­ous to life. This section applies to those who negligently act to spread the virus. They shall be penalized with imprisonment or fine or both.",
+                    "C": "Section 270 of the Indian Penal Code, 1860- “Malignant act likely to spread infection of disease danger­ous to life. This law is for those who know the consequence of their actions could lead to the spread of the virus and still choose to do such an act shall be penalized.",
+                    "D": "The Epidemic Disease Act, 1897-  Power to take special measures and prescribe regulations as a too dangerous epidemic disease.",
+                    "E": "Section 188 of Indian Penal Code - According to this law you can not disobey an order duly promulgated by a public servant. Defaulters who disobey the orders of the public servants and roan around aimlessly during the lockdown should be punished under strickt actions."
+                }
+            ],
+            "Vaccine": " People who are fully vaccinated, so two weeks after the two-dose schedule people are protected and they can be together with other vaccinated people. The time between the first dose and the second dose should be of 28 days. Vaccination for COVID-19 voluntary. However, it is important to complete the schedule of vaccination for protecting yourself against this disease. And vaccination is also important to limit the spread of this disease to close contacts and family members. In case after the first dose of vaccine you become infected.  In case after the first dose of the vaccine, you become infected then you are not eligible for a second dose. When you recover and after the Covid test if your report is negative then after a month you can schedule for the second dose of vaccine."
+        }
+
+    ]
+
+
+    // useEffect(() => {
+
+    //     fetch(Home).then(response => {
+    //         console.log(response);
+    //         return response.json();
+    //     }).then(data => {
+    //         // Work with JSON data here
+    //         console.log(data);
+    //         setcontent(data.Home)
+    //     }).catch(err => {
+    //         // Do something for an error here
+    //         console.log("Error Reading data " + err);
+    //     });
+    // }, [])
+
+    // JSON.parse("./coroknow.json")
 
 
     return (
@@ -131,7 +157,7 @@ function Home() {
 
             <div className="Home__left">
 
-                {content.map(e => (
+                {details.map(e => (
                     <div className="con">
                         <h5>Things to Remember in Covid</h5>
 
