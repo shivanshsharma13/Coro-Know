@@ -54,6 +54,15 @@ function Vaccine() {
 
                     ?
                     <div className="vaccine_show">
+                        {/* <div class="form-outline">
+                            <input
+                                type="search"
+                                id="form1"
+                                placeholder="Search a District"
+                                class="form-control"
+                                onChange={event => { }}
+                            />
+                        </div> */}
                         <div className="gh row">
                             <h1>Date:{date}</h1>
                             {vac.map(e => (
@@ -82,6 +91,9 @@ function Vaccine() {
 
                                         {e.sessions.map(q => (
                                             <ListGroup className="list-group-flush">
+                                                <Card.Text>
+                                                    Date-{q.date}
+                                                </Card.Text>
                                                 <ListGroup.Item>Available Capacity Dose-1:{q.available_capacity_dose1}</ListGroup.Item>
                                                 <ListGroup.Item>Available Capacity Dose-2:{q.available_capacity_dose2}</ListGroup.Item>
                                                 <ListGroup.Item>Min Age limit:{q.min_age_limit}</ListGroup.Item>
