@@ -2,4 +2,4 @@
 
 A Compleate website !
 
-# [The website link](https://master.d30jxlgexv1l4v.amplifyapp.com/)
+# [The website link](https://shivanshsharma13.github.io/Coro-Know/)
